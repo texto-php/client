@@ -8,7 +8,7 @@ use Texto\Client\Message as MessageInterface;
 class Message implements MessageInterface
 {
     /**
-     * @var string
+     * @var array
      */
     private $to;
 
@@ -29,7 +29,7 @@ class Message implements MessageInterface
      * @param string $content
      * @param string|null $from
      */
-    public function __construct(string $to, string $content, string $from = null)
+    public function __construct(array $to, string $content, string $from = null)
     {
         $this->to = $to;
         $this->from = $from;
@@ -41,9 +41,14 @@ class Message implements MessageInterface
         return $this->from;
     }
 
-    public function getTo(): string
+    public function getTo(): array
     {
         return $this->to;
+    }
+
+    public function addTo(string $number): void
+    {
+        $this->to[] = $number;
     }
 
     public function getContent(): string

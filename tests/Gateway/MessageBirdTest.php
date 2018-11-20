@@ -26,11 +26,11 @@ class MessageBirdTest extends TestCase
     {
         $resource = $this->prophesize(Messages::class);
         $resource->create(Argument::that(function($obj) {
-            if ('123' !== $obj->originator) {
+            if ('321' !== $obj->originator) {
                return false;
             }
 
-            if (['321'] !== $obj->recipients) {
+            if (['123'] !== $obj->recipients) {
                 return false;
             }
 
@@ -43,7 +43,7 @@ class MessageBirdTest extends TestCase
 
         $this->client->messages = $resource;
 
-        $msg = new Message('123', 'Foo', '321');
+        $msg = new Message(['123'], 'Foo', '321');
 
         $this->gateway->send($msg);
     }

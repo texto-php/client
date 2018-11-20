@@ -8,7 +8,7 @@ interface Message
 {
     public function getFrom(): string;
 
-    public function getTo(): string;
+    public function getTo(): array;
 
     public function getContent(): string;
 }

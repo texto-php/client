@@ -15,7 +15,7 @@ class MessageTest extends TestCase
 
     protected function setup()
     {
-        $this->message = new Message('+01 1213123', 'Foo', '+313123');
+        $this->message = new Message(['+01 1213123'], 'Foo', '+313123');
     }
 
     public function test_from()
@@ -25,7 +25,7 @@ class MessageTest extends TestCase
 
     public function test_to()
     {
-        $this->assertSame('+01 1213123', $this->message->getTo());
+        $this->assertSame(['+01 1213123'], $this->message->getTo());
     }
 
     public function test_content()

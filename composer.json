@@ -5,7 +5,8 @@
     "require-dev": {
         "phpunit/phpunit": "^7.4",
         "twilio/sdk": "^5.25",
-        "messagebird/php-rest-api": "^1.10"
+        "messagebird/php-rest-api": "^1.10",
+        "plivo/php-sdk": "^4.1"
     },
     "license": "MIT",
     "authors": [

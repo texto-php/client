@@ -24,14 +24,14 @@ class TwilioTest extends TestCase
     public function testSend()
     {
         $list = $this->prophesize(MessageList::class);
-        $list->create('+1234', [
+        $list->create(['+1234'], [
             'from' =>  'Foo',
             'body' => 'Foo'
         ])->shouldBeCalled();
 
         $this->client->messages = $list->reveal();
 
-        $msg = new Message('+1234', 'Foo', 'Foo');
+        $msg = new Message(['+1234'], 'Foo', 'Foo');
         $this->gateway->send($msg);
     }
 }

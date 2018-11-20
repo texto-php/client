@@ -21,8 +21,8 @@ class MessageBird implements Gateway
     public function send(Message $message): void
     {
         $object = new \MessageBird\Objects\Message();
-        $object->originator = $message->getTo();
-        $object->recipients = [$message->getFrom()];
+        $object->originator = $message->getFrom();
+        $object->recipients = $message->getTo();
         $object->body = $message->getContent();
 
         try {
