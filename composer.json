@@ -1,9 +1,10 @@
 {
     "name": "texto/client",
     "type": "library",
-    "description": ""
+    "description": "",
     "require-dev": {
-        "phpunit/phpunit": "^7.4"
+        "phpunit/phpunit": "^7.4",
+        "twilio/sdk": "^5.25"
     },
     "license": "MIT",
     "authors": [
@@ -22,5 +23,5 @@
         "psr-4": {
             "Texto\\Client\\Tests\\": "test/"
         }
-    },
+    }
 }

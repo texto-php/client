@@ -6,5 +6,5 @@ namespace Texto\Client;
 
 interface Gateway
 {
-    public function send(Message $message): bool;
+    public function send(Message $message): void;
 }
