@@ -1,6 +1,7 @@
 {
     "name": "texto/client",
     "type": "library",
+    "description": ""
     "require-dev": {
         "phpunit/phpunit": "^7.4"
     },
@@ -16,5 +17,10 @@
             "Texto\\Client\\": "src/"
         }
     },
-    "require": {}
+    "require": {},
+    "autoload-dev": {
+        "psr-4": {
+            "Texto\\Client\\Tests\\": "test/"
+        }
+    },
 }

@@ -6,7 +6,9 @@ namespace Texto\Client;
 
 interface Message 
 {
-    public function getPhonenumber(): string;
+    public function getFrom(): string;
 
-    public function getMessage(): string;
+    public function getTo(): string;
+
+    public function getContent(): string;
 }
