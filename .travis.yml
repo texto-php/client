@@ -10,7 +10,7 @@ install:
     - composer update --prefer-stable --prefer-dist
 
 script:
-    - composer test-ci
+    - composer test
 
 after_success:
     - wget https://scrutinizer-ci.com/ocular.phar
