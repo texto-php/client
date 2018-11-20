@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Texto\Client\Tests;
+namespace Texto\Client\Tests\Gateway;
 
 use PHPUnit\Framework\TestCase;
 use Texto\Client\Gateway\Twilio;
