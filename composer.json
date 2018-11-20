@@ -23,5 +23,8 @@
         "psr-4": {
             "Texto\\Client\\Tests\\": "test/"
         }
-    }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
 }
